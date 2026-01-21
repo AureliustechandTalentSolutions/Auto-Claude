@@ -133,6 +133,56 @@ npm run test:backend
 python apps/backend/validate_spec.py --spec-dir apps/backend/specs/001-feature --checkpoint all
 ```
 
+### Beads Task Management
+```bash
+# Install Beads (if not already installed)
+npm install -g @beads/bd
+
+# Initialize in project (already done)
+bd init
+
+# Create new task
+bd create "Implement user authentication"
+
+# Create task with priority and type
+bd create "Fix login bug" -p 0 -t bug
+
+# View ready work (no blockers)
+bd ready
+
+# List all tasks
+bd list
+
+# Show task details
+bd show Auto-Claude-<hash>
+
+# Update task status
+bd update Auto-Claude-<hash> --status in_progress
+bd update Auto-Claude-<hash> --status done
+
+# Close task
+bd close Auto-Claude-<hash> --reason "Fixed in PR #123"
+
+# Add dependencies (task2 blocks task1)
+bd dep add Auto-Claude-<hash1> Auto-Claude-<hash2>
+
+# View dependency tree
+bd dep tree Auto-Claude-<hash>
+
+# Sync with git (auto-syncs by default)
+bd sync
+```
+
+**Beads Integration:**
+- Git-backed issue tracker designed for AI coding agents
+- Tasks stored in `.beads/issues.jsonl` (committed to git)
+- Runtime files (.db, daemon.pid) are gitignored
+- Automatic sync with git commits
+- Dependency-aware task management
+- Perfect for persistent memory across agent sessions
+
+**Version:** Beads v0.47.1 installed via npm
+
 ### Releases
 ```bash
 # 1. Bump version on your branch (creates commit, no tag)

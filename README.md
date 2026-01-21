@@ -148,6 +148,24 @@ See [guides/CLI-USAGE.md](guides/CLI-USAGE.md) for complete CLI documentation.
 
 ## Development
 
+### Quick Setup with Dev Containers
+
+The fastest way to get started is using VSCode Remote Containers or GitHub Codespaces:
+
+[![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/AndyMik90/Auto-Claude)
+[![Open in GitHub Codespaces](https://img.shields.io/static/v1?label=Codespaces&message=Open&color=green&logo=github)](https://github.com/codespaces/new?hide_repo_select=true&ref=develop&repo=AndyMik90/Auto-Claude)
+
+**What's included:**
+- Python 3.12+, Node.js 24+, uv, Beads, GitHub CLI
+- All dependencies pre-installed
+- VSCode extensions for Python, TypeScript, React, Git
+- Port forwarding for Electron debugging
+- 5-10 minute automated setup
+
+See [DEVCONTAINER.md](DEVCONTAINER.md) for complete documentation.
+
+### Manual Setup
+
 Want to build from source or contribute? See [CONTRIBUTING.md](CONTRIBUTING.md) for complete development setup instructions.
 
 For Linux-specific builds (Flatpak, AppImage), see [guides/linux.md](guides/linux.md).

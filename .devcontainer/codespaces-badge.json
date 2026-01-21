@@ -1,0 +1,21 @@
+{
+  "name": "Auto-Claude",
+  "description": "Autonomous multi-agent coding framework powered by Claude AI",
+  "url": "https://github.com/AndyMik90/Auto-Claude",
+  "repository": "AndyMik90/Auto-Claude",
+  "branch": "develop",
+  "hostRequirements": {
+    "cpus": 4,
+    "memory": "8gb",
+    "storage": "32gb"
+  },
+  "customizations": {
+    "codespaces": {
+      "openFiles": [
+        "README.md",
+        "CLAUDE.md",
+        "DEVCONTAINER.md"
+      ]
+    }
+  }
+}
